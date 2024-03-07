@@ -1,0 +1,159 @@
+
+
+ body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.App {
+  color: white;
+  background-color: rgb(31, 30, 30);
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 0px #ff0000;
+  width: 80vw; /* Adjusted for better responsiveness */
+  max-width: 500px; /* Maximum width to ensure form doesn't look too wide on larger screens */
+  font-family: sans-serif;
+  text-align: center;
+  transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+.heading {
+  font-size: larger;
+  margin-top: -30px; /* Provide some spacing between heading and form */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Use gap for spacing instead of margin-top for cleaner code */
+}
+
+.form input,
+.form textarea {
+  height: auto; /* Adjust height for textarea */
+  min-height: 30px; /* Minimum height for input and textarea */
+  border-radius: 10px;
+  padding: 10px; /* Adjust padding to ensure text is vertically centered */
+  border: 1px solid #ccc;
+  background: #222;
+  color: #fff;
+  resize: vertical; /* Allows the textarea to be resizable vertically only */
+}
+
+/* Style placeholders for consistency */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #bbb;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #bbb;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #bbb;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Hover effects for input and textarea */
+.form input:hover,
+.form textarea:hover {
+  border-color: #4CAF50;
+}
+
+.form button {
+  cursor: pointer;
+  background-color: #4CAF50;
+  border: none;
+  height: 50px;
+  width: 10vw;
+  /* margin: auto; */
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #367c39;
+  transform: scale(1.05);
+}
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .App {
+    width: 90vw; /* More width on smaller screens */
+  }
+
+  .form input,
+  .form textarea,
+  .form button {
+    height: 40px; /* Slightly smaller elements on smaller screens */
+  }
+}
+
+/* Add transitions for interactive elements */
+.form input:hover,
+.form textarea:hover,
+.form button:hover {
+  border-color: #4CAF50; /* Change border color on hover */
+}
+
+.form input:focus,
+.form textarea:focus {
+  transform: scale(1.02); /* Slightly larger on focus for an interactive feel */
+}
+
+.form button,
+.form .button-group button {
+  cursor: pointer;
+  background-color: #4CAF50;
+  border: none;
+  height: 40px; /* Adjusted for visual consistency */
+  border-radius: 10px;
+  padding: 0 15px;
+  margin-top: 20px; /* Provide spacing from the form inputs */
+  color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.form .button-group {
+  display: flex;
+  justify-content: center; /* Adjust this as needed */
+  gap: 10px; /* Provides spacing between buttons */
+}
+
+.form .button-group button:hover {
+  background-color: #367c39;
+  transform: scale(1.05);
+}
+
+.form .button-group button:nth-child(2) { /* Styling specifically for the Clear button */
+  background-color: #BB2D3B; /* Different color for clear action */
+}
+
+.form .button-group button:nth-child(2):hover {
+  background-color: #9a2330;
+}
+.toggle-switch {
+  /* border: 2px solid white; */
+  color: white;
+  position: absolute;
+  top: 150px;
+  right: 500px;
+  cursor: pointer;
+}
+
+.toggle-switch img {
+  width: 30px;
+  height: auto;
+}
